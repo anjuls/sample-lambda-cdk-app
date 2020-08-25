@@ -1,16 +1,21 @@
+# Sample App to Demo AWS CDK using Python and AWS Lambda
 
-# Welcome to your CDK Python project!
+The sample app is using AWS cloud development kit with python as programming langugage. It creates few demo lambda functions and other supporting components. It is derived using AWS CDK Workshop. 
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`sample_app_stack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 This project is set up like a standard Python project.  The initialization process also creates
 a virtualenv within this project, stored under the .env directory.  To create the virtualenv
 it assumes that there is a `python3` executable in your path with access to the `venv` package.
 If for any reason the automatic creation of the virtualenv fails, you can create the virtualenv
 manually once the init process completes.
+
+## Prerequisites 
+Install following 
+* python 3
+* python3-venv
+* pip
+* nodejs 
+* aws cdk `sudo npm install -g aws-cdk`
 
 To manually create a virtualenv on MacOS and Linux:
 
@@ -47,6 +52,7 @@ You can now begin exploring the source code, contained in the hello directory.
 There is also a very trivial test included that can be run like this:
 
 ```
+$ sudo apt install python-pytest
 $ pytest
 ```
 
@@ -63,3 +69,22 @@ command.
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+
+
+To bootstrap the CDK App, which means that it will create staging bucket to host the code. 
+```
+cdk bootstrap
+```
+
+To synthesize code to cloudformation, use below. If there is no error, then proceed.
+```
+cdk synth
+```
+
+To deploy the cdk sample app:
+```
+cdk deploy
+```
+
+

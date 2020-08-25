@@ -2,7 +2,7 @@ import json
 import pytest
 
 from aws_cdk import core
-from sample-app.sample_app_stack import SampleAppStack
+from sample-lambda-cdk-app.sample_app_stack import SampleAppStack
 
 
 def get_template():
